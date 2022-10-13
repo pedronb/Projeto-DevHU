@@ -1,4 +1,6 @@
 import './style.css'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function FormData() {
     return(
@@ -9,11 +11,21 @@ function FormData() {
             </div>
             <div className="form-group-birth">
                 <p>Data de nascimento</p>
-                <input className="form-control-date" type="text" />
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => {}}
+                    className="form-control-date"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
             <div className="form-group-date">
                 <p>Para qual dia você deseja gerar o gráfico de saúde?</p>
-                <input className="form-control-date" type="text" />
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => {}}
+                    className="form-control-date"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
             <div className="form-group-date">
                 <p>Selecione o horário para preencher os dados</p>
