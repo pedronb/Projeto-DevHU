@@ -1,0 +1,43 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 535px;
+    height: 76px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-bottom: 30px;
+}
+
+.heading h2 {
+    width: 535px;
+    height: 38px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 136.02%;
+    color: #27272E;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.heading p {
+    width: 535px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162.02%;
+    font-feature-settings: 'salt' on;
+    color: #27272E;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

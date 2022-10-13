@@ -11,3 +11,124 @@ body, html {
     background-color: #F7FAFC;
     height: 100%;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 760px;
+  height: 950px;
+  left: 610px;
+  top: 0px;
+}
+
+section {
+  height: 100%;
+}
+
+.divider-vertical-container {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 100%;
+  background: linear-gradient(180deg, #1482FC 0%, #9513FB 100%);
+  border-radius: 0px;
+  width: 586px;
+  height: 200%;
+}
+
+.divider-vertical-container h1 {
+  position: absolute;
+  width: 376px;
+  height: 101px;
+  left: 79px;
+  top: 166px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+}
+
+.mark-group {
+  position: absolute;
+  width: 304.02px;
+  height: 671px;
+  left: 2px;
+  top: 279px;
+  mix-blend-mode: multiply;
+}
+
+
+.logo-header {
+  display: flex;
+  position: absolute;
+  width: 189.17px;
+  height: 50px;
+  left: 50px;
+  top: 50px;
+}
+
+.logo-header svg {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%; 
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.logo-header h2 {
+  position: absolute;
+  left: 35.24%;
+  right: 17.3%;
+  top: 25%;
+  bottom: 25%;
+  color: #FFFFFF;
+}
+
+.sub-header p{
+  position: absolute;
+  width: 297px;
+  height: 90px;
+  left: 267px;
+  top: 291px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  gap: 50px;
+  width: 760px;
+  height: 882px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  width: 535px;
+  height: 600px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));;
+}
