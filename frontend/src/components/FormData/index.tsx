@@ -1,8 +1,13 @@
 import './style.css'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useState } from 'react';
 
 function FormData() {
+
+    const [birthDate, setBirthDate] = useState(new Date);
+    const [metricsDate, setMetricsDate] = useState(new Date());
+
     return(
         <div className="form">
             <div className="form-group-name">
@@ -12,8 +17,8 @@ function FormData() {
             <div className="form-group-birth">
                 <p>Data de nascimento</p>
                 <DatePicker
-                    selected={new Date()}
-                    onChange={(date: Date) => {}}
+                    selected={birthDate}
+                    onChange={(date: Date) => setBirthDate(date)}
                     className="form-control-date"
                     dateFormat="dd/MM/yyyy"
                 />
@@ -21,8 +26,8 @@ function FormData() {
             <div className="form-group-date">
                 <p>Para qual dia você deseja gerar o gráfico de saúde?</p>
                 <DatePicker
-                    selected={new Date()}
-                    onChange={(date: Date) => {}}
+                    selected={metricsDate}
+                    onChange={(date: Date) => setMetricsDate(date)}
                     className="form-control-date"
                     dateFormat="dd/MM/yyyy"
                 />
