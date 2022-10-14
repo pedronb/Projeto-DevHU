@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="tb_metrics")
+@Table(name="TB_METRICS")
 public class Metrics {
 
     @Id
@@ -18,7 +18,7 @@ public class Metrics {
     @Column
     private Date date;
     @Column
-    private int hour;
+    private int moment;
     @Column
     private int bpm;
     @Column
@@ -29,7 +29,13 @@ public class Metrics {
     @ManyToOne
     private User user;
 
-    public Metrics() {;
+    public Metrics(Date date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
+        this.date = date;
+        this.moment = moment;
+        this.bpm = bpm;
+        this.systolicPressure = systolicPressure;
+        this.diastolicPressure = diastolicPressure;
+        this.user = user;
     }
 
     public Long getId() {
@@ -48,35 +54,35 @@ public class Metrics {
         this.date = date;
     }
 
-    public Integer getHour() {
-        return hour;
+    public int getMoment() {
+        return moment;
     }
 
-    public void setHour(Integer hour) {
-        this.hour = hour;
+    public void setMoment(int moment) {
+        this.moment = moment;
     }
 
-    public Integer getBpm() {
+    public int getBpm() {
         return bpm;
     }
 
-    public void setBpm(Integer bpm) {
+    public void setBpm(int bpm) {
         this.bpm = bpm;
     }
 
-    public Integer getSystolicPressure() {
+    public int getSystolicPressure() {
         return systolicPressure;
     }
 
-    public void setSystolicPressure(Integer systolicPressure) {
+    public void setSystolicPressure(int systolicPressure) {
         this.systolicPressure = systolicPressure;
     }
 
-    public Integer getDiastolicPressure() {
+    public int getDiastolicPressure() {
         return diastolicPressure;
     }
 
-    public void setDiastolicPressure(Integer diastolicPressure) {
+    public void setDiastolicPressure(int diastolicPressure) {
         this.diastolicPressure = diastolicPressure;
     }
 
