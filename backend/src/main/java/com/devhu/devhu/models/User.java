@@ -12,15 +12,17 @@ import java.util.List;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
+    @Column
     private String name;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date birthDate;
 
     @OneToMany
-    private List<Metrics> metrics = new ArrayList<>();
+    private List<Metrics> metrics;
 
     public User(String name, Date birthDate) {
         this.name = name;

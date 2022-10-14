@@ -6,29 +6,30 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "tb_metrics")
+@Table(name="tb_metrics")
 public class Metrics {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @Column
     private Date date;
+    @Column
     private Integer hour;
+    @Column
     private Integer bpm;
+    @Column
     private Integer systolicPressure;
+    @Column
     private Integer diastolicPressure;
 
     @ManyToOne
     private User user;
 
-    public Metrics(Date date, Integer hour, Integer bpm, Integer systolicPressure, Integer diastolicPressure, User user) {
-        this.date = date;
-        this.hour = hour;
-        this.bpm = bpm;
-        this.systolicPressure = systolicPressure;
-        this.diastolicPressure = diastolicPressure;
-        this.user = user;
+    public Metrics() {;
     }
 
     public Long getId() {
