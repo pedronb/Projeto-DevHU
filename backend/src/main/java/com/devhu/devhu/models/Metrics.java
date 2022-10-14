@@ -18,13 +18,13 @@ public class Metrics {
     @Column
     private Date date;
     @Column
-    private Integer hour;
+    private int hour;
     @Column
-    private Integer bpm;
+    private int bpm;
     @Column
-    private Integer systolicPressure;
+    private int systolicPressure;
     @Column
-    private Integer diastolicPressure;
+    private int diastolicPressure;
 
     @ManyToOne
     private User user;

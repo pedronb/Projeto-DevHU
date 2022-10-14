@@ -1,1 +1,1 @@
-INSERT INTO tb_user VALUES ('1991-03-05','Pedro')
+INSERT INTO tb_user VALUES ('05-03-1991','Pedro')
