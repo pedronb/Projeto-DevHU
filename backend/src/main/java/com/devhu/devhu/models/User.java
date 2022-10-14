@@ -1,6 +1,9 @@
 package com.devhu.devhu.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,8 +16,16 @@ public class User {
     private Long id;
 
     private String name;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date birthDate;
-    private List<Metrics> metrics;
+
+    @OneToMany
+    private List<Metrics> metrics = new ArrayList<>();
+
+    public User(String name, Date birthDate) {
+        this.name = name;
+        this.birthDate = birthDate;
+    }
 
     public Long getId() {
         return id;
