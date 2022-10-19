@@ -3,9 +3,7 @@ package com.devhu.devhu.controllers;
 import com.devhu.devhu.models.Metrics;
 import com.devhu.devhu.service.MetricsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +17,10 @@ public class metricsController {
     @GetMapping
     public List<Metrics> findMetrics() {
         return service.findMetrics();
+    }
+
+    @PostMapping
+    public Metrics saveMetrics(@RequestBody Metrics metrics) {
+        return service.save(metrics);
     }
 }

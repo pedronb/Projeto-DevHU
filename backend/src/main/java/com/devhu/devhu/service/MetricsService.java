@@ -16,4 +16,8 @@ public class MetricsService {
     public List<Metrics> findMetrics() {
         return repository.findAll();
     }
+
+    public Metrics save(Metrics metrics) {
+        return repository.save(metrics);
+    }
 }
