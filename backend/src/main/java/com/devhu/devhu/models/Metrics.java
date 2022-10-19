@@ -3,6 +3,7 @@ package com.devhu.devhu.models;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,7 +17,7 @@ public class Metrics {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     @Column
-    private Date date;
+    private LocalDate date;
     @Column
     private int moment;
     @Column
@@ -29,13 +30,12 @@ public class Metrics {
     @ManyToOne
     private User user;
 
-    public Metrics(Date date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
+    public Metrics(LocalDate date, int moment, int bpm, int systolicPressure, int diastolicPressure) {
         this.date = date;
         this.moment = moment;
         this.bpm = bpm;
         this.systolicPressure = systolicPressure;
         this.diastolicPressure = diastolicPressure;
-        this.user = user;
     }
 
     public Long getId() {
@@ -46,11 +46,11 @@ public class Metrics {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

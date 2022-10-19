@@ -6,6 +6,8 @@ import com.devhu.devhu.service.MetricsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MetricsServiceImplement implements MetricsService {
 
@@ -13,8 +15,12 @@ public class MetricsServiceImplement implements MetricsService {
     MetricsRepository metricsRepository;
 
     @Override
-    public Metrics save(Metrics metrics) {
-        return metricsRepository.save(metrics);
+    public Metrics saveMetric(Metrics metrics) {
+        return null;
     }
 
+    @Override
+    public List<Metrics> findMetrics() {
+        return metricsRepository.findAll();
+    }
 }

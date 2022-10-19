@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface UserService {
 
-    User save(User user);
+    User saveUser(User user);
     List<Metrics> findAll(User user);
 }
