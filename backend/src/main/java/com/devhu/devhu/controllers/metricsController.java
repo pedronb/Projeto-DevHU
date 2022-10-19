@@ -1,7 +1,7 @@
 package com.devhu.devhu.controllers;
 
 import com.devhu.devhu.models.Metrics;
-import com.devhu.devhu.service.serviceImplement.MetricsServiceImplement;
+import com.devhu.devhu.service.MetricsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import java.util.List;
 public class metricsController {
 
     @Autowired
-    private MetricsServiceImplement service;
+    private MetricsService service;
 
     @GetMapping
     public List<Metrics> findMetrics() {

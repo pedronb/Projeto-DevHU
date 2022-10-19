@@ -23,6 +23,9 @@ public class User {
     @OneToMany
     private List<Metrics> metrics;
 
+    public User() {
+    }
+
     public User(String name, LocalDate birthDate) {
         this.name = name;
         this.birthDate = birthDate;

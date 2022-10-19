@@ -30,12 +30,16 @@ public class Metrics {
     @ManyToOne
     private User user;
 
-    public Metrics(LocalDate date, int moment, int bpm, int systolicPressure, int diastolicPressure) {
+    public Metrics(){
+    }
+
+    public Metrics(LocalDate date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
         this.date = date;
         this.moment = moment;
         this.bpm = bpm;
         this.systolicPressure = systolicPressure;
         this.diastolicPressure = diastolicPressure;
+        this.user = user;
     }
 
     public Long getId() {
