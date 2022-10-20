@@ -19,6 +19,11 @@ public class metricsController {
         return service.findMetrics();
     }
 
+    @GetMapping("/{id}")
+    public List<Metrics> findMetricsUser(@PathVariable Long id) {
+        return service.findMetricsByUser(id);
+    }
+
     @PostMapping
     public Metrics saveMetrics(@RequestBody Metrics metrics) {
         return service.save(metrics);

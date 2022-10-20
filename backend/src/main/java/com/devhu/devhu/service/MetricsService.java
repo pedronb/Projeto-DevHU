@@ -44,4 +44,8 @@ public class MetricsService {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public List<Metrics> findMetricsByUser(Long id) {
+        return repository.findMetricsByUser(id);
+    }
 }
