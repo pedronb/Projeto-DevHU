@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,7 +22,7 @@ public class User {
     private LocalDate birthDate;
 
     @OneToMany
-    private List<Metrics> metrics;
+    private List<Metrics> metrics = new ArrayList<>();
 
     public User() {
     }
@@ -57,9 +58,5 @@ public class User {
 
     public List<Metrics> getMetrics() {
         return metrics;
-    }
-
-    public void setMetrics(List<Metrics> metrics) {
-        this.metrics = metrics;
     }
 }

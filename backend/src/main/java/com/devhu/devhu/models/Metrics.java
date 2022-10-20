@@ -33,13 +33,12 @@ public class Metrics {
     public Metrics(){
     }
 
-    public Metrics(LocalDate date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
+    public Metrics(LocalDate date, int moment, int bpm, int systolicPressure, int diastolicPressure) {
         this.date = date;
         this.moment = moment;
         this.bpm = bpm;
         this.systolicPressure = systolicPressure;
         this.diastolicPressure = diastolicPressure;
-        this.user = user;
     }
 
     public Long getId() {
@@ -97,4 +96,5 @@ public class Metrics {
     public void setUser(User user) {
         this.user = user;
     }
+
 }

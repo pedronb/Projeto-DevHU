@@ -18,6 +18,10 @@ public class UserController {
     public List<User> findUsers() {
         return service.findAll();
     }
+    @GetMapping("/{id}")
+    public User findById(@PathVariable Long id) {
+        return service.findById(id);
+    }
 
     @PostMapping
     public User saveUser(@RequestBody User user) {

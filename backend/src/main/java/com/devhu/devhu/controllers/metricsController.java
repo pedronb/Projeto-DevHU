@@ -23,4 +23,13 @@ public class metricsController {
     public Metrics saveMetrics(@RequestBody Metrics metrics) {
         return service.save(metrics);
     }
+    @DeleteMapping("/{id}")
+    public void deleteMetrics(@PathVariable Long id) {
+        service.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public Metrics updateMetrics(@PathVariable Long id, @RequestBody Metrics metrics) {
+        return service.update(metrics, id);
+    }
 }
