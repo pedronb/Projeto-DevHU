@@ -1,9 +1,9 @@
 .form {
     width: 535px;
     height: 494px;
-    flex: none;
+    flex: auto;
     order: 1;
-    align-self: stretch;
+    align-self: center;
     flex-grow: 0;
 }
 
