@@ -1,0 +1,17 @@
+.list-metrics-container {
+    position: absolute;
+    width: 535px;
+    min-height: 32px;
+    top: 780px;
+    margin: 10px;
+}
+
+.list-metrics-container tr {
+   background-color: #D1DAFA;
+   color: #384FA1;
+   
+}
+
+.list-metrics-container table {
+    width: 100%;
+}
