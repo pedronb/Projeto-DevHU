@@ -6,7 +6,6 @@ import { useForm, Resolver } from "react-hook-form";
 type FormValues = {
    name: String,
    birthDate: String,
-   date: String
   };
 
 const resolver: Resolver<FormValues> = async (values) => {
@@ -33,8 +32,8 @@ function FormData() {
         resolver: resolver
       });
 
-    const [state, setState] = useState<FormValues>();
-    const onSubmit = handleSubmit((data) => setState(state => [data]));
+    const [state, setState] = useState<FormValues[]>([]);
+    const onSubmit = handleSubmit((data) => setState(state => [...state, data]));
 
     return(
         <form onSubmit = {onSubmit}>
