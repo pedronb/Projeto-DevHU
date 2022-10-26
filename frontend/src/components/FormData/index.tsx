@@ -1,33 +1,15 @@
 import './style.css'
 import "react-datepicker/dist/react-datepicker.css";
-import { useEffect, useState } from 'react';
-import { useForm, Resolver } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import axios from 'axios';
-
-// type FormValues = {
-//    name: String;
-//    birthDate: String;
-//   };
-
-// const resolver: Resolver<FormValues> = async (values) => {
-//     return {
-//       values: values,
-//       errors: !values.name
-//       ? {
-//           name: {
-//             type: "required",
-//             message: "This is required."
-//           }
-//         }
-//       : {}
-//     };
-//   };
 
 function FormData() {
 
     const {register, handleSubmit} = useForm();
 
     const onSubmit = (e) => {
+      axios.post("http://localhost:8080/users", {register})
+      .then(res => res.data)
       console.log(e);
     }
 
