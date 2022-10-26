@@ -1,9 +1,8 @@
 .card-metrics {
     box-sizing: border-box;
-    position: absolute;
+    position: static;
     width: 535px;
-    height: 310px;
-    top: 450px;
+    min-height: 200px;
     border: 1px solid #E7F0FD;
     box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
     filter: drop-shadow(0px 0px 1px rgba(12, 26, 75, 0.24));
@@ -47,14 +46,6 @@
     height: 18px;
     border-radius: 27px;
     background: #FFFFFF;
-}
-
-.bpm-art-container {
-    
-    width: 343px;
-    height: 158px;
-    left: 159px;
-    top: 90px;
 }
 
 .frame-bpm {
@@ -173,4 +164,63 @@
     box-shadow: 0px 1px 2px rgba(50, 50, 71, 0.08), 0px 0px 1px rgba(50, 50, 71, 0.2);
     border-radius: 6px;
     border-color: #FFFFFF;
+}
+
+.form-control-date {
+    width: 535px;
+    height: 36px;
+    top: 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(50, 50, 71, 0.08), 0px 0px 1px rgba(50, 50, 71, 0.2);
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 15px;
+    color: #32323C;
+    padding: 16px;
+}
+
+.form-group-date {
+    width: 535px;
+    height: 71px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    position: static;
+}
+
+.form-group-date p {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #425466;
+}
+
+.info-metrics {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #425466;
+    margin-bottom: 15px;
 }

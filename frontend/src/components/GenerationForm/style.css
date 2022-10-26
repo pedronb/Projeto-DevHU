@@ -1,14 +1,11 @@
 .btn-form {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: flex-end;
     padding: 0px;
-    width: 196px;
+    width: 535px;
     height: 46px;
     opacity: 0.5;
-    top: 800px;
-    position: absolute;
-    right: 10px;
+    position: static;
 }
 
 .btn-form button {

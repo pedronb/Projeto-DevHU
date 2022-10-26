@@ -46,18 +46,10 @@ function FormData() {
                 </div>
                 <div className="form-group-birth">
                     <p>Data de nascimento</p>
-                    <input className="form-control-date" type="text" placeholder="dd/mm/yyyy" {...register("birthDate")}/>
+                    <input className="form-control-date" type="text" placeholder="dia/mês/ano" {...register("birthDate")}/>
                     {errors?.birthDate && <p>{errors.birthDate.message}</p>}
                 </div>
-                <div className="form-group-date">
-                    <p>Para qual dia você deseja gerar o gráfico de saúde?</p>
-                    <input className="form-control-date" type="text" placeholder="dd/mm/yyyy" {...register("date")}/>
-                    {errors?.date && <p>{errors.date.message}</p>}
-                </div>
                 <button type="submit">Salvar</button> 
-                <div className="form-group-date">
-                    <p>Selecione o horário para preencher os dados</p>
-                </div>
             </div>
         </form>
     )

@@ -9,6 +9,7 @@ import { useForm, Resolver } from "react-hook-form";
 import { useState } from 'react';
 
 type FormValues = {
+    date: String,
     bpm: number;
     systolicPressure: number;
     diastolicPressure: number;
@@ -45,7 +46,15 @@ function CardMetrics() {
 
     return(
         <>
-        <form onSubmit = {onSubmit} >           
+        <form onSubmit = {onSubmit} >
+            <div className="form-group-date">
+                <p>Para qual dia você deseja gerar o gráfico de saúde?</p>
+                <input className="form-control-date" type="text" placeholder="dia/mês/ano" {...register("date")}/>
+                {errors?.date && <p>{errors.date.message}</p>}
+            </div>
+            <div className="info-metrics">
+                <p>Selecione o horário para preencher os dados</p>
+            </div>           
             <div className="card-metrics">
                 <div className="hours-radio">
                     <input type="radio" id="h-2" name="hour" value="02:00" {...register("moment")}/>

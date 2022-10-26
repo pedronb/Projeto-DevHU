@@ -27,14 +27,14 @@ function ListMetrics({ metrics }: Props) {
         <div className="list-metrics-container">
             <table>
                 <tbody>
-                {metrics.map((metric, index) => (
-              <tr data-index={index}>
-                <td>Hora: {metric.moment}</td>
-                <td>BPM: {metric.bpm}</td>
-                <td>PRESSAO ARTERIAL: {metric.systolicPressure} / {metric.diastolicPressure}</td>
-                <td><img src={editar} alt="editar" /></td>
-                <td><img src={excluir} alt="excluir" /></td>
-              </tr>
+                  {metrics.map((metric, index) => (
+                <tr data-index={index}>
+                  <td>Hora: {metric.moment}</td>
+                  <td>BPM: {metric.bpm}</td>
+                  <td>PRESSAO ARTERIAL: {metric.systolicPressure} / {metric.diastolicPressure}</td>
+                  <td><img src={editar} alt="editar" /></td>
+                  <td><img src={excluir} alt="excluir" /></td>
+                </tr>
             ))}
                 </tbody>
             </table>
