@@ -4,8 +4,8 @@ function GenerationForm() {
     return(
         <div className="btn-form">
             <button type="button">Gerar diário de saúde</button>
-        </div> 
+        </div>
     )
   }
-  
-  export default GenerationForm
+
+export default GenerationForm
