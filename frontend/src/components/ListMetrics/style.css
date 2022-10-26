@@ -15,3 +15,7 @@
 .list-metrics-container table {
     width: 100%;
 }
+
+.list-metrics-container img {
+    cursor: pointer;
+}
