@@ -1,52 +1,28 @@
 import './style.css'
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from 'react';
-import { useForm, Resolver } from "react-hook-form";
-
-type FormValues = {
-   name: String,
-   birthDate: String,
-  };
-
-const resolver: Resolver<FormValues> = async (values) => {
-    return {
-      values: values,
-      errors: !values.name
-      ? {
-          name: {
-            type: "required",
-            message: "This is required."
-          }
-        }
-      : {}
-    };
-  };
+import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 function FormData() {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors }
-      } = useForm<FormValues>({
-        resolver: resolver
-      });
+    const {register, handleSubmit} = useForm();
 
-    const [state, setState] = useState<FormValues[]>([]);
-    const onSubmit = handleSubmit((data) => setState(state => [...state, data]));
+    const onSubmit = (e) => {
+      axios.post("http://localhost:8080/users", {register})
+      .then(res => res.data)
+      console.log(e);
+    }
 
     return(
-        <form onSubmit = {onSubmit}>
+        <form onSubmit = {handleSubmit(onSubmit)}>
             <div className="form">
                 <div className="form-group-name">
                     <p>Nome completo</p>
                     <input className="form-control" type="text" placeholder="Nome completo" {...register("name")}/>
-                    {errors?.name && <p>{errors.name.message}</p>}
                 </div>
                 <div className="form-group-birth">
                     <p>Data de nascimento</p>
                     <input className="form-control-date" type="text" placeholder="dia/mês/ano" {...register("birthDate")}/>
-                    {errors?.birthDate && <p>{errors.birthDate.message}</p>}
                 </div>
                 <button type="submit">Salvar</button> 
             </div>

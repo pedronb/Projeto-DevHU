@@ -18,8 +18,8 @@ public class User {
 
     @Column
     private String name;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    private LocalDate birthDate;
+    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private String birthDate;
 
     @OneToMany
     private List<Metrics> metrics = new ArrayList<>();
@@ -27,7 +27,7 @@ public class User {
     public User() {
     }
 
-    public User(String name, LocalDate birthDate) {
+    public User(String name, String birthDate) {
         this.name = name;
         this.birthDate = birthDate;
     }
@@ -48,11 +48,11 @@ public class User {
         this.name = name;
     }
 
-    public LocalDate getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 

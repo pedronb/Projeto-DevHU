@@ -15,9 +15,9 @@ public class Metrics {
     @Column
     private Long id;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     @Column
-    private LocalDate date;
+    private String date;
     @Column
     private int moment;
     @Column
@@ -33,7 +33,7 @@ public class Metrics {
     public Metrics(){
     }
 
-    public Metrics(LocalDate date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
+    public Metrics(String date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
         this.date = date;
         this.moment = moment;
         this.bpm = bpm;
@@ -50,11 +50,11 @@ public class Metrics {
         this.id = id;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
