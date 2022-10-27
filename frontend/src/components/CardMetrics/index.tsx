@@ -7,6 +7,7 @@ import ListMetrics from '../ListMetrics'
 
 import { useForm, Resolver } from "react-hook-form";
 import { useState } from 'react';
+import axios from 'axios';
 
 type FormValues = {
     date: String,

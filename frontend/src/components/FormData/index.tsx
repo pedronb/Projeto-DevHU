@@ -8,7 +8,7 @@ function FormData() {
     const {register, handleSubmit} = useForm();
 
     const onSubmit = (e) => {
-      axios.post("http://localhost:8080/users", {register})
+      axios.post("http://localhost:8080/users", e)
       .then(res => res.data)
       console.log(e);
     }
