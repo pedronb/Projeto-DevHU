@@ -7,7 +7,7 @@
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 
-<h1 align="center">Projeto DevHU - Clevar</h1>
+<h1 align="center">Projeto DevHU - Clever</h1>
 
 O Aplicativo Web Clever tem o intuito de fazer o acompanhamento de parâmetros de saúde. O usuário informa seus dados e suas métricas de saúde por data e horário de medição, a partir das informações é gerado um gráfico de acompanhamento.
 
