@@ -15,7 +15,7 @@ O Aplicativo Web Clever tem o intuito de fazer o acompanhamento de parâmetros d
 ![grafico](https://github.com/pedronb/Projeto-DevHU/blob/main/images/grafico.png)
 
 ## ⚙️Funcionalidades
-- Cadastra usuário
+- Cadastra usuário no banco de dados
 - Salva métricas de saúde do usuário de acordo com data preenchida
 - Lista métricas a serem consideradas para geração de gráfico
 - Geração de gráfico (BPM/Pressão Arterial x horário)
@@ -46,6 +46,8 @@ npm install --global yarn
 
 # com o VS Code aberto rode o aplicativo
 yarn dev
+
+# acesso ao banco de dados: localhost:8080/h2-console
 ```
 
 ## 🔜Implementações futuras
