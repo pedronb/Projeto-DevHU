@@ -12,7 +12,7 @@
 O Aplicativo Web Clever tem o intuito de fazer o acompanhamento de parâmetros de saúde. O usuário informa seus dados e suas métricas de saúde por data e horário de medição, a partir das informações é gerado um gráfico de acompanhamento.
 
 ![main](https://github.com/pedronb/Projeto-DevHU/blob/main/images/principal.png)
-![grafico]()
+![grafico](https://github.com/pedronb/Projeto-DevHU/blob/main/images/grafico.png)
 
 ## ⚙️Funcionalidades
 - Cadastra usuário
