@@ -28,15 +28,21 @@ public class MetricsService {
 
     public Metrics update(Metrics metrics, Long id) {
         Optional<Metrics> m = repository.findById(id);
-        if (m.isPresent()) {
-            Metrics obj = m.get();
-            obj.setDate(metrics.getDate());
-            obj.setMoment(metrics.getMoment());
-            obj.setBpm(metrics.getBpm());
-            obj.setSystolicPressure(metrics.getSystolicPressure());
-            obj.setDiastolicPressure(metrics.getDiastolicPressure());
 
-            return repository.save(obj);
+        try {
+            if (m.isPresent()) {
+                Metrics obj = m.get();
+                obj.setDate(metrics.getDate());
+                obj.setMoment(metrics.getMoment());
+                obj.setBpm(metrics.getBpm());
+                obj.setSystolicPressure(metrics.getSystolicPressure());
+                obj.setDiastolicPressure(metrics.getDiastolicPressure());
+
+                return repository.save(obj);
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Ocorreu um erro ao atualizar as métricas!" + e.getMessage());
         }
         return null;
     }

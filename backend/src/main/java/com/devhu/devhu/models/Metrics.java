@@ -12,19 +12,11 @@ public class Metrics {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
-
-    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    @Column
     private String date;
-    @Column
     private int moment;
-    @Column
     private int bpm;
-    @Column
     private int systolicPressure;
-    @Column
     private int diastolicPressure;
 
     @ManyToOne
