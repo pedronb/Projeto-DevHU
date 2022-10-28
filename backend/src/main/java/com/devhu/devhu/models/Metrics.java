@@ -14,7 +14,7 @@ public class Metrics {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String date;
-    private int moment;
+    private String moment;
     private int bpm;
     private int systolicPressure;
     private int diastolicPressure;
@@ -25,7 +25,7 @@ public class Metrics {
     public Metrics(){
     }
 
-    public Metrics(String date, int moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
+    public Metrics(String date, String moment, int bpm, int systolicPressure, int diastolicPressure, User user) {
         this.date = date;
         this.moment = moment;
         this.bpm = bpm;
@@ -50,11 +50,11 @@ public class Metrics {
         this.date = date;
     }
 
-    public int getMoment() {
+    public String getMoment() {
         return moment;
     }
 
-    public void setMoment(int moment) {
+    public void setMoment(String moment) {
         this.moment = moment;
     }
 

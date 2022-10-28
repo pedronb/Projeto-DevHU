@@ -2,7 +2,6 @@ import DividerVertical from "./components/DividerVertical"
 import Heading from "./components/Heading"
 import FormData from "./components/FormData"
 import CardMetrics from "./components/CardMetrics"
-import GenerationForm from "./components/GenerationForm"
 
 function App() {
   return(
@@ -15,7 +14,6 @@ function App() {
                     <Heading />
                     <FormData />
                     <CardMetrics />
-                    <GenerationForm />
                   </div>
                 </div>
         </section>

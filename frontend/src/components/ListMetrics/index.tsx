@@ -12,6 +12,7 @@ type FormValues = {
 
 interface Props {
     metrics: FormValues[]
+    
   }
 
 function ListMetrics({ metrics }: Props) {

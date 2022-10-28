@@ -4,10 +4,10 @@ import './style.css'
 
 import ListMetrics from '../ListMetrics'
 
-
 import { useForm, Resolver } from "react-hook-form";
 import { useState } from 'react';
-import axios from 'axios';
+import GenerationForm from '../GenerationForm';
+
 
 type FormValues = {
     date: String,
@@ -108,6 +108,7 @@ function CardMetrics() {
             </div>
         </form>
         <ListMetrics metrics={state}/>
+        <GenerationForm metrics={state}/>
         </>
     )
   }
