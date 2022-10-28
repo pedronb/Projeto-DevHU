@@ -51,7 +51,6 @@ yarn dev
 ```
 
 ## 🔜Implementações futuras
-- Salvar métricas no banco de dados
 - Geração de gráfico
 
 ## Links úteis
