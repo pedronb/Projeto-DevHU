@@ -36,7 +36,7 @@ Para rodar o repositório é necessário seguir os passos:
 # clone o repositório
 git clone https://github.com/pedronb/Projeto-DevHU.git
 
-# na pasta backend/src/main rode o arquivo DevHuApplication.java, na IDE de sua preferência que tenha o JDK devidamente instalado.
+# na pasta backend/src/main rode o arquivo DevHuApplication.java, na IDE de sua preferência(indicado o Intellij) que tenha o JDK 17 devidamente instalado.
 
 # em sequencia na pasta frontend abra o terminal e digite:
 code .
@@ -57,6 +57,7 @@ yarn dev
 - [Documentação React Hook Form](https://react-hook-form.com/)
 - [Documentação Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/)
+- [JDK 17](https://www.oracle.com/br/java/technologies/downloads/#java17)
 
 ## 🤝Colaboradores
 <table>
